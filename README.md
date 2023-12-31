@@ -1,2 +1,2 @@
 # Portfolio
-This repository contains the backend code for my portfolio website.
+This repository contains the code for my portfolio website.
