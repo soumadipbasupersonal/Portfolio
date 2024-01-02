@@ -16,54 +16,70 @@
 			body {
 				font-size: 16px;
 			}
-	
+		
 			nav ul {
 				display: flex;
 			}
-	
+		
 			nav li {
 				margin-right: 20px;
 			}
-	
+		
 			/* Additional styles for mobile-only menu */
 			.mobile-menu {
 				display: none;
 			}
-	
+		
 			.menu-toggle {
-				display: inline;
-				background: none;
-				border: none;
+				display: inline-block;
 				cursor: pointer;
-				font-size: 16px;
-				color: #080808; /* Change the color as needed */
-				outline: none;
+				font-size: 40px; /* Adjust the font size as needed */
+				font-family: 'Arial', sans-serif; /* Change the font family as needed */
+				color: #0b1012; /* Change the color as needed */
+				font-weight: bold;
 			}
-	
+		
 			.menu-toggle::after {
-				content: '\00B7 \00B7 \00B7'; /* Unicode for three dots */
+				content: ''; /* Unicode for three dots */
 			}
-	
+		
 			.mobile-menu ul {
-				display: none;
+				list-style-type: none; /* Remove default list styling */
+				padding: 0; /* Remove default padding */
 			}
-	
+		
+			.mobile-menu li {
+				margin-bottom: 10px; /* Adjust spacing between list items */
+			}
+		
+			.mobile-menu a {
+				font-weight: bold; /* Make the links bold */
+				font-size: 20px; /* Adjust the font size for the links */
+				color: #333; /* Change the color as needed */
+				text-decoration: none; /* Remove underline from links */
+			}
+		
+			.mobile-menu a:hover {
+				color: #4CAF50; /* Change the color on hover as needed */
+			}
+		
 			@media only screen and (max-width: 600px) {
 				/* Hide desktop navigation on smaller screens */
 				nav.desktop-nav {
 					display: none;
 				}
-	
+		
 				/* Show mobile menu on smaller screens */
 				.mobile-menu {
-					display: inline;
+					display: block;
 				}
-	
+		
 				.mobile-menu ul.show {
-					display: inline;
+					display: block;
 				}
 			}
 		</style>
+		
 
 	</head>
 	<body class="is-preload">
@@ -85,7 +101,12 @@
 	
 		<!-- Mobile-friendly menu for smaller screens -->
 		<div class="mobile-menu" id="mobileNav">
-			<button onclick="toggleMobileNav()">&#9776; Menu</button>
+			<span class="menu-toggle" onclick="toggleMobileNav()">
+				<span class="menu-icon"><i class="fas fa-bars"></i></span>
+
+				<!-- <span class="menu-text"></span> -->
+			</span>
+			
 			<ul class="container">
 				<li><a href="#top">Introduction</a></li>
 				<li><a href="#work">Experience</a></li>
@@ -177,7 +198,7 @@
 								 <!-- <i class="fa-duotone fa-briefcase"></i>  -->
 								<span class="icon solid featured fa-graduation-cap"></span>   
 								 <h3>Bachelor of Technology</h3>
-								<p><strong>Institute</strong>: Maulana Abul Kalam Azad University of Technology <br><strong>Duration</strong>: 2014 - 2017<br><strong>Specialization</strong>: Electronics & Communications Engineering</p>
+								<p><strong>Institiute</strong>: Maulana Abul Kalam Azad University of Technology <br><strong>Duration</strong>: 2014 - 2017<br><strong>Specialization</strong>: Electronics & Communications Engineering<br><strong>CGPA</strong>: 7.8</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
@@ -185,7 +206,7 @@
 								<!-- <a href="#" class="image featured"><img src="images/Logo-with-R-1024x369-1.png" alt="" /></a> -->
 								<span class="icon solid featured fa-landmark"></span>
 								<h3>Diploma</h3>
-								<p><strong>Institute</strong>: West Bengal State Council of Technical Education <br><strong>Duration</strong>: 2011 - 2014<br><strong>Specialization</strong>: Electronics & Telecommunications Engineering<br></p>
+								<p><strong>Institiute</strong>: West Bengal State Council of Technical Education <br><strong>Duration</strong>: 2011 - 2014<br><strong>Specialization</strong>: Electronics & Telecommunications Engineering<br><strong>Result</strong>: 81%</p>
 							</section>
 						</div>
 						
