@@ -6,32 +6,99 @@
 -->
 <html>
 	<head>
-		<title>Soumadip Basu Portfolio</title>
+		<title>Miniport by HTML5 UP</title>
 		<meta charset="utf-8" />
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-/6dhiL5+q7+zK2Vk1JZvobEGy22vUzF9Sc/ZJc5Uotj0UZav+yU1jVa7b9WUjzImzBEX6IroXwQpRfljzuLJhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+		<style>
+			/* Your existing styles for larger screens */
+			body {
+				font-size: 16px;
+			}
+	
+			nav ul {
+				display: flex;
+			}
+	
+			nav li {
+				margin-right: 20px;
+			}
+	
+			/* Additional styles for mobile-only menu */
+			.mobile-menu {
+				display: none;
+			}
+	
+			.menu-toggle {
+				display: inline;
+				background: none;
+				border: none;
+				cursor: pointer;
+				font-size: 16px;
+				color: #080808; /* Change the color as needed */
+				outline: none;
+			}
+	
+			.menu-toggle::after {
+				content: '\00B7 \00B7 \00B7'; /* Unicode for three dots */
+			}
+	
+			.mobile-menu ul {
+				display: none;
+			}
+	
+			@media only screen and (max-width: 600px) {
+				/* Hide desktop navigation on smaller screens */
+				nav.desktop-nav {
+					display: none;
+				}
+	
+				/* Show mobile menu on smaller screens */
+				.mobile-menu {
+					display: inline;
+				}
+	
+				.mobile-menu ul.show {
+					display: inline;
+				}
+			}
+		</style>
 
 	</head>
- 	<body class="is-preload"> 
+	<body class="is-preload">
 
- 		<!-- Nav -->
- 			<nav id="nav"> 
-				<ul class="container">
-<!--   					<li><a href="#top">Introduction</a></li>  -->
-  					<li><a href="#work">Experience</a></li> 
-<!--   					<li><a href="#Education">Education</a></li> -->
- 					<li><a href="#project">Project</a></li> 
- 					<li><a href="#Skills">Skills</a></li> 
-<!-- 					<li><a href="#Certifications">Certification</a></li> -->
-<!-- 					<li><a href="#Awards">Achievement</a></li> -->
- 					<li><a href="#contact">Contact</a></li> 
-<!-- 					<li><a href="documents/Soumadip__Basu_CV.pdf" download="Soumadip_Basu_CV.pdf">Resume</a></li> -->
-				</ul>
-			</nav>
+		<!-- Nav -->
+		<nav id="nav" class="desktop-nav">
+			<ul class="container">
+				<li><a href="#top">Introduction</a></li>
+				<li><a href="#work">Experience</a></li>
+				<li><a href="#Education">Education</a></li>
+				<li><a href="#project">Project</a></li>
+				<li><a href="#Skills">Skills</a></li>
+				<li><a href="#Certifications">Certification</a></li>
+				<li><a href="#Awards">Achievement</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="documents/Soumadip__Basu_CV.pdf" download="Soumadip_Basu_CV.pdf">Resume</a></li>
+			</ul>
+		</nav>
+	
+		<!-- Mobile-friendly menu for smaller screens -->
+		<div class="mobile-menu" id="mobileNav">
+			<button onclick="toggleMobileNav()">&#9776; Menu</button>
+			<ul class="container">
+				<li><a href="#top">Introduction</a></li>
+				<li><a href="#work">Experience</a></li>
+				<li><a href="#Education">Education</a></li>
+				<li><a href="#project">Project</a></li>
+				<li><a href="#Skills">Skills</a></li>
+				<li><a href="#Certifications">Certification</a></li>
+				<li><a href="#Awards">Achievement</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="documents/Soumadip__Basu_CV.pdf" download="Soumadip_Basu_CV.pdf">Resume</a></li>
+			</ul>
+		</div>
+			
 
 		<!-- Home -->
 			<article id="top" class="wrapper style1">
@@ -118,7 +185,7 @@
 								<!-- <a href="#" class="image featured"><img src="images/Logo-with-R-1024x369-1.png" alt="" /></a> -->
 								<span class="icon solid featured fa-landmark"></span>
 								<h3>Diploma</h3>
-								<p><strong>Institute</strong>: West Bengal State Council of Technical Education <br><strong>Duration</strong>: 2011 - 2014<br><strong>Specialization</strong>: Electronics & Telecommunications Engineering</p>
+								<p><strong>Institute</strong>: West Bengal State Council of Technical Education <br><strong>Duration</strong>: 2011 - 2014<br><strong>Specialization</strong>: Electronics & Telecommunications Engineering<br></p>
 							</section>
 						</div>
 						
@@ -484,6 +551,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					var mobileMenu = document.querySelector('.mobile-menu ul');
+					mobileMenu.style.display = 'none';
+				});
+		
+				function toggleMobileNav() {
+					var mobileMenu = document.querySelector('.mobile-menu ul');
+					
+					if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+						mobileMenu.style.display = 'block';
+					} else {
+						mobileMenu.style.display = 'none';
+					}
+				}
+			</script>
+			
 	</body>
 </html>
