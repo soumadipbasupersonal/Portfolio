@@ -12,73 +12,81 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-/6dhiL5+q7+zK2Vk1JZvobEGy22vUzF9Sc/ZJc5Uotj0UZav+yU1jVa7b9WUjzImzBEX6IroXwQpRfljzuLJhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<style>
-			/* Your existing styles for larger screens */
-			body {
-				font-size: 16px;
-			}
-		
-			nav ul {
-				display: flex;
-			}
-		
-			nav li {
-				margin-right: 20px;
-			}
-		
-			/* Additional styles for mobile-only menu */
-			.mobile-menu {
-				display: none;
-			}
-		
-			.menu-toggle {
-				display: inline-block;
-				cursor: pointer;
-				font-size: 40px; /* Adjust the font size as needed */
-				font-family: 'Arial', sans-serif; /* Change the font family as needed */
-				color: #0b1012; /* Change the color as needed */
-				font-weight: bold;
-			}
-		
-			.menu-toggle::after {
-				content: ''; /* Unicode for three dots */
-			}
-		
-			.mobile-menu ul {
-				list-style-type: none; /* Remove default list styling */
-				padding: 0; /* Remove default padding */
-			}
-		
-			.mobile-menu li {
-				margin-bottom: 10px; /* Adjust spacing between list items */
-			}
-		
-			.mobile-menu a {
-				font-weight: bold; /* Make the links bold */
-				font-size: 20px; /* Adjust the font size for the links */
-				color: #333; /* Change the color as needed */
-				text-decoration: none; /* Remove underline from links */
-			}
-		
-			.mobile-menu a:hover {
-				color: #4CAF50; /* Change the color on hover as needed */
-			}
-		
-			@media only screen and (max-width: 600px) {
-				/* Hide desktop navigation on smaller screens */
-				nav.desktop-nav {
-					display: none;
-				}
-		
-				/* Show mobile menu on smaller screens */
-				.mobile-menu {
-					display: block;
-				}
-		
-				.mobile-menu ul.show {
-					display: block;
-				}
-			}
-		</style>
+    /* Your existing styles for larger screens */
+    body {
+        font-size: 16px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-right: 20px;
+    }
+
+    /* Additional styles for mobile-only menu */
+    .mobile-menu {
+        display: none;
+        text-align: right; /* Align the content to the right */
+        padding-right: 20px; /* Add some padding from the right side */
+    }
+
+    .menu-toggle {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 40px; /* Adjust the font size as needed */
+        font-family: 'Arial', sans-serif; /* Change the font family as needed */
+        color: #2599c7; /* Change the color as needed */
+        font-weight: bold;
+    }
+
+    .menu-toggle::after {
+        content: ''; /* Unicode for three dots */
+    }
+
+    .mobile-menu ul {
+        list-style-type: none; /* Remove default list styling */
+        padding: 0; /* Remove default padding */
+    }
+
+    .mobile-menu li {
+        margin-bottom: 10px; /* Adjust spacing between list items */
+    }
+
+    .mobile-menu a {
+        font-weight: bold; /* Make the links bold */
+        font-size: 20px; /* Adjust the font size for the links */
+        color: #0766af; /* Change the color as needed */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    .mobile-menu a:hover {
+        color: #0955a8; /* Change the color on hover as needed */
+    }
+
+    /* Update the color property for mobile menu options */
+    .mobile-menu a {
+        color: #055fa8; /* Change to your desired text color */
+    }
+
+    @media only screen and (max-width: 600px) {
+        /* Hide desktop navigation on smaller screens */
+        nav.desktop-nav {
+            display: none;
+        }
+
+        /* Show mobile menu on smaller screens */
+        .mobile-menu {
+            display: block;
+        }
+
+        .mobile-menu ul.show {
+            display: block;
+        }
+    }
+</style>
+
 		
 
 	</head>
